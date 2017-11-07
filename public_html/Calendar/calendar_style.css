@@ -78,3 +78,7 @@ ul {
     margin-top: 1%;
     margin-left: 2%;
 }
+
+#meatballsPictureCalendar:hover, #pancakesPictureCalendar:hover {
+    opacity: 0.8;
+}

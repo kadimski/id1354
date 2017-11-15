@@ -10,9 +10,9 @@
         <link href='https://fonts.googleapis.com/css?family=Alef' rel='stylesheet'>
     </head>
     <body>
-        <h1 class="logo"><a href="../index.html">Tasty Recipes</a></h1>
+        <h1 class="logo"><a href="../index.php">Tasty Recipes</a></h1>
         
-        <ul class="meny"><li><a href="../index.html">Hem</a></li><li><a href="../Meatballs_recipe/meatballs_recipe.html">Köttbullar</a></li><li><a href="../Pancakes_recipe/pancakes_recipe.html">Pannkakor</a></li><li><a href="../Calendar/calendar.html">Kalender</a></li></ul>
+        <nav><ul class="meny"><li><a href="../index.php">Hem</a></li><li><a href="../Meatballs_recipe/meatballs_recipe.php">Köttbullar</a></li><li><a href="../Pancakes_recipe/pancakes_recipe.php">Pannkakor</a></li><li><a href="../Calendar/calendar.php">Kalender</a></li><li><form>Användarnamn:<input type="text" name="username" placeholder="Användarnamn"><br/>Lösenord:<input type="password" name="password" placeholder="Lösenord"><input type="submit" value="Logga in"></form></li><a href="../Signup/signup.php">Registrera dig</a></ul></nav>
         
         <div class="background">
             <h2>Köttbullar</h2>
@@ -43,6 +43,12 @@
             <h3>Kommentarer:</h3>
                 <p>Stina: Väldigt goda köttbullar!</p>
                 <p>Bertil: Bra och enkelt recept.</p>
+                
+            <h3>Kommentera:</h3>
+                <form action="" id="meatballsComment">
+                    <textarea rows="4" cols="70" name="comment" form="meatballsComment"></textarea><br>
+                    <input type="submit" value="Skicka kommentar">
+                </form>
         </div>
     </body>
 </html>

@@ -87,6 +87,15 @@ li {
     display: list-item;
 }
 
+nav {
+    display: block;	
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
 .logo {
     text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
     font-size: 400%;
@@ -149,7 +158,6 @@ li {
     border: 1px solid black;
     margin: 2%;
     padding: 2%;
-    padding-bottom: 0;
     padding-top: 0;
     text-align: left;
 }

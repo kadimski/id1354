@@ -20,7 +20,7 @@
                     Användarnamn:<input type="text" name="username" placeholder="Användarnamn"><br>
                     Lösenord:<input type="password" name="password" placeholder="Lösenord"><br>
                     <input type="submit" name="register" value="Registrera dig">
-                </form>     
+            </form>     
         </div>
     </body>
 </html>

@@ -12,7 +12,7 @@
     </head>
     <body>
         <?php
-            include_once '../logo_and_meny.php';
+            include_once '../Includes/logo_and_meny.php';
         ?> 
         
         <div id="calendar">

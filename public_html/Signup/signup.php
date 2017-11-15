@@ -11,12 +11,12 @@
     </head>
     <body>
         <?php
-            include_once '../logo_and_meny.php';
+            include_once '../Includes/logo_and_meny.php';
         ?>
               
         <div class="background">
             <h1>Registrera dig:</h1>
-                <form>
+            <form action="register.php" method="POST">
                     Användarnamn:<input type="text" name="username" placeholder="Användarnamn"><br>
                     Lösenord:<input type="password" name="password" placeholder="Lösenord"><br>
                     <input type="submit" name="register" value="Registrera dig">

@@ -24,7 +24,7 @@ session_start();
             // Check username
             if($resultCheck < 1)
             {
-                header("Location: login.php?=error");
+                header("Location: login.php?=usernameerror");
                 exit();
             }
             else

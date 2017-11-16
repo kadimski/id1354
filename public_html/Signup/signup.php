@@ -19,7 +19,7 @@
             <form action="signup_function.php" method="POST">
                 Användarnamn:<input type="text" name="username" placeholder="Användarnamn" required><br>
                 Lösenord:<input type="password" name="password" placeholder="Lösenord" required><br>
-                    <input type="submit" name="register" value="Registrera dig">
+                <input type="submit" name="register" value="Registrera dig">
             </form>     
         </div>
     </body>

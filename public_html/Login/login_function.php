@@ -4,7 +4,7 @@ session_start();
 
     if (isset($_POST['login']))
     {
-        include '../Includes/databasehandler.php';
+        include '../Includes/login_databasehandler.php';
         
         $username = $_POST['username'];
         $password = $_POST['password'];
@@ -12,7 +12,7 @@ session_start();
         // Check empty input
         if(empty($username) || empty($password))
         {
-            header("Location: login.php?=emptyfields");
+            header("Location: login.php?login=emptyfields");
             exit();
         }
         else
@@ -24,7 +24,7 @@ session_start();
             // Check username
             if($resultCheck < 1)
             {
-                header("Location: login.php?=usernameerror");
+                header("Location: login.php?login=wrongusernameorpassword");
                 exit();
             }
             else
@@ -34,7 +34,7 @@ session_start();
                     // Check password
                     if(!($password == $row['password']))
                     {
-                        header("Location: login.php?=wrongusernameorpassword");
+                        header("Location: login.php?login=wrongusernameorpassword");
                         exit();
                     }
                     elseif($password == $row['password'])
@@ -50,6 +50,6 @@ session_start();
     }
     else
     {
-        header("Location: login.php?=error");
+        header("Location: login.php?login=error");
         exit();
     }

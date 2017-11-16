@@ -17,7 +17,17 @@
         <div class="background">
             <h1>Logga in:</h1>
             <form action="login_function.php" method="POST">
-                Användarnamn:<input type="text" name="username" placeholder="Användarnamn" required><br>
+                Användarnamn:<input type="text" name="username" placeholder="Användarnamn" required>
+                <?php
+                    if (isset($_GET['login']) && $_GET['login'] == 'emptyfields') 
+                    {
+                        echo 'Fyll i användarnamn och lösenord';
+                    }
+                    elseif (isset($_GET['login']) && $_GET['login'] == 'wrongusernameorpassword') 
+                    {
+                        echo 'Fel användarnamn eller lösenord, försök igen';
+                    }
+                ?><br>
                 Lösenord:<input type="password" name="password" placeholder="Lösenord" required><br>
                 <input type="submit" name="login" value="Logga in">
             </form>     

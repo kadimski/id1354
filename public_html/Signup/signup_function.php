@@ -2,7 +2,7 @@
 
     if(isset($_POST['register']))
     {
-        include_once '../Includes/databasehandler.php';
+        include_once '../Includes/login_databasehandler.php';
         
         $username = mysqli_real_escape_string($connection, $_POST['username']);
         $password = mysqli_real_escape_string($connection, $_POST['password']);
@@ -22,7 +22,7 @@
             // Check valid username
             if($resultCheck > 0)
             {
-                header("Location: signup.php?=usernametaken");
+                header("Location: signup.php?signup=usernametaken");
                 exit();
             }
             else 
@@ -31,13 +31,13 @@
                 $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password');";
                 
                 mysqli_query($connection, $sql);
-                header("Location: signup.php?=success");
+                header("Location: ../Login/login.php");
                 exit();
             }
         }
     }
     else
     {
-        header("Location: signup.php");
+        header("Location: signup.php?signup=error");
         exit();
     }

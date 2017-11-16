@@ -44,11 +44,12 @@
                 <p>Stina: Väldigt goda köttbullar!</p>
                 <p>Bertil: Bra och enkelt recept.</p>
                 
-            <h3>Kommentera:</h3>
-                <form action="" id="meatballsComment">
-                    <textarea rows="4" cols="70" name="comment" form="meatballsComment"></textarea><br>
-                    <input type="submit" value="Skicka kommentar">
-                </form>
+            <?php
+                if(isset($_SESSION['id']))
+                {
+                    include_once '../Includes/comments_form.php';
+                }
+            ?>
         </div>
     </body>
 </html>

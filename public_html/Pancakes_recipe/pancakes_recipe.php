@@ -40,6 +40,13 @@
             <h3>Kommentarer:</h3>
                 <p>Stina: Väldigt goda pannkakor!</p>
                 <p>Bertil: Bra och enkelt recept.</p>
+                
+            <?php
+                if(isset($_SESSION['id']))
+                {
+                    include_once '../Includes/comments_form.php';
+                }
+            ?>
         </div>    
     </body>
 </html>

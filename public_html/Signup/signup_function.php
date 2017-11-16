@@ -22,7 +22,7 @@
             // Check valid username
             if($resultCheck > 0)
             {
-                header("Location: signup.php?=usertaken");
+                header("Location: signup.php?=usernametaken");
                 exit();
             }
             else 

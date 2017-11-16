@@ -38,7 +38,7 @@
                 <li>1</li>
                 <li>2</li>
                 <li>3</li>
-                <li>4<a href="../Meatballs_recipe/meatballs_recipe.html"><img id="meatballsPictureCalendar" src="../Meatballs_recipe/meatballs.jpg" alt="Meatballs"></a></li>
+                <li>4<a href="../Meatballs_recipe/meatballs_recipe.php"><img id="meatballsPictureCalendar" src="../Meatballs_recipe/meatballs.jpg" alt="Meatballs"></a></li>
                 <li>5</li>
                 <li>6</li>
                 <li>7</li>
@@ -51,7 +51,7 @@
                 <li>14</li>
                 <li>15</li>
                 <li>16</li>
-                <li>17<a href="../Pancakes_recipe/pancakes_recipe.html"><img id="pancakesPictureCalendar" src="../Pancakes_recipe/pancakes.jpg" alt="Pancakes"></a></li>
+                <li>17<a href="../Pancakes_recipe/pancakes_recipe.php"><img id="pancakesPictureCalendar" src="../Pancakes_recipe/pancakes.jpg" alt="Pancakes"></a></li>
                 <li>18</li>
                 <li>19</li>
                 <li>20</li>

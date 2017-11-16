@@ -45,9 +45,20 @@
                 <p>Bertil: Bra och enkelt recept.</p>
                 
             <?php
+                include '../Includes/comment_databasehandler.php';
+                include '../Includes/comment_functions.php';
+                getMeatballComments($connection);
+                
                 if(isset($_SESSION['id']))
                 {
-                    include_once '../Includes/comments_form.php';
+                    echo '<h3>Kommentera:</h3>
+                            <form method="POST" action="'.setComments($connection).'">
+                                <input type="hidden" name="username" value="TEST">
+                                <textarea rows="4" cols="70" name="comment"></textarea><br>
+                                <input type="hidden" name="recipe" value="meatballs">
+                                <input type="submit" name="send_comment" value="Skicka kommentar">
+                            </form>';
+                    
                 }
             ?>
         </div>

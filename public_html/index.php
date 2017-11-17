@@ -24,7 +24,7 @@
                 <?php
                     if (isset($_SESSION['id'])) 
                     {
-                        echo '<li><a href="includes/logout.php">Logga ut</a></li>';
+                        echo '<li><a href="includes/logout.php">Logga ut '.$_SESSION['usr'].'</a></li>';
                     } 
                     else 
                     {
@@ -36,7 +36,7 @@
         </nav>
         
         <div id="introduction">
-            <h2>Välkommen till Tasty Recipes!</h2>
+            <h2>Välkommen till Tasty Recipes <?php if(isset($_SESSION['id'])) { echo $_SESSION['usr'];} ?>!</h2>
 
             <p>På denna sida kommer du hitta många olika smakrika recepet<br> 
             Klicka på en maträtt i menyn ovan för att besöka dess recept<br>

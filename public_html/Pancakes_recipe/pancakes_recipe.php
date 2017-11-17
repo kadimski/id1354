@@ -50,7 +50,7 @@
                 {
                     echo '<h3>Kommentera:</h3>
                             <form method="POST" action="'.setComments($connection).'">
-                                <input type="hidden" name="username" value="TEST">
+                                <input type="hidden" name="username" value="'.$_SESSION['usr'].'">
                                 <textarea rows="4" cols="70" name="comment"></textarea><br>
                                 <input type="hidden" name="recipe" value="pancakes">
                                 <input type="submit" name="send_comment" value="Skicka kommentar">

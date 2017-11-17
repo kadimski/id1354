@@ -11,7 +11,7 @@
     </head>
     <body>
         <?php
-            include_once '../Includes/logo_and_meny.php';
+            include_once '../includes/logo_and_meny.php';
         ?> 
         
         <div class="background">
@@ -57,8 +57,7 @@
                                 <textarea rows="4" cols="70" name="comment"></textarea><br>
                                 <input type="hidden" name="recipe" value="meatballs">
                                 <input type="submit" name="send_comment" value="Skicka kommentar">
-                            </form>';
-                    
+                            </form>';   
                 }
             ?>
         </div>

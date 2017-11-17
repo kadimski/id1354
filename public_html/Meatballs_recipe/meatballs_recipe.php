@@ -42,7 +42,6 @@
         
             <h3>Kommentarer:</h3>
                 <p>Stina: Väldigt goda köttbullar!</p>
-                <p>Bertil: Bra och enkelt recept.</p>
                 
             <?php
                 include '../Includes/comment_databasehandler.php';

@@ -39,7 +39,6 @@
         
             <h3>Kommentarer:</h3>
                 <p>Stina: Väldigt goda pannkakor!</p>
-                <p>Bertil: Bra och enkelt recept.</p>
                 
             <?php
                 include '../Includes/comment_databasehandler.php';

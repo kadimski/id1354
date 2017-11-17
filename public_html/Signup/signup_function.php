@@ -31,7 +31,7 @@
                 $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password');";
                 
                 mysqli_query($connection, $sql);
-                header("Location: ../Login/login.php");
+                header("Location: ../Login/login.php?signup=success");
                 exit();
             }
         }

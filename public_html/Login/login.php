@@ -16,6 +16,12 @@
         
         <div class="background">
             <h1>Logga in:</h1>
+            <?php
+                if(isset($_GET['signup']) && $_GET['signup'] == 'success')
+                {
+                    echo '<p>Registreringen lyckades, vänligen logga in</p>';
+                }
+            ?>
             <form action="login_function.php" method="POST">
                 Användarnamn:<input type="text" name="username" placeholder="Användarnamn" required>
                 <?php

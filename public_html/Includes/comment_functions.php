@@ -40,7 +40,7 @@
         {
             $cid = $_POST['commentid'];
             $sql_get_author = "SELECT username FROM comments WHERE commentid ='$cid'";
-            $temp = mysqli_query($connection, $sql_get_author);
+            $temp= mysqli_query($connection, $sql_get_author);
             $temp2 = mysqli_fetch_object($temp);
             $commentauthor=$temp2->username;
             

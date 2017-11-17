@@ -96,6 +96,18 @@ form {
     margin-top: 0em;
 }
 
+input[type=submit] {
+    padding: 3px; 
+    background: whitesmoke; 
+    border: 1px solid black;
+    cursor: pointer;
+    font-family: Alef;
+}
+
+input[type=submit]:hover {
+    opacity: 0.8;
+}
+
 .logo {
     text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
     font-size: 400%;

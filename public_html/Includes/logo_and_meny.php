@@ -12,7 +12,7 @@
             <?php
                 if(isset($_SESSION['id']))
                 {
-                    echo '<li><a href="../includes/logout.php">Logga ut</a></li>';
+                    echo '<li><a href="../Includes/logout.php">Logga ut '.$_SESSION['usr'].'</a></li>';
                 }
                 else
                 {

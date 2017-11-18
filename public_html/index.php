@@ -41,7 +41,16 @@
             <p>På denna sida kommer du hitta många olika smakrika recepet<br> 
             Klicka på en maträtt i menyn ovan för att besöka dess recept<br>
             Om du vill se månadens rätter kan du hitta dessa i kalendern ovan<br>
-            För att logga in eller registrera dig, klicka på knapparna ovan
+            <?php
+                if(isset($_SESSION['id']))
+                {
+                    echo 'För att logga ut, klicka på knappen ovan';
+                }
+                else
+                {
+                    echo 'För att logga in eller registrera dig, klicka på knapparna ovan';
+                }
+            ?>
             </p>
         </div>
     </body>

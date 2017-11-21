@@ -41,17 +41,18 @@
                 <p>Stina: Väldigt goda pannkakor!</p>
                 
             <?php
-                include '../Includes/comment_databasehandler.php';
-                include '../Includes/comment_functions.php';
-                getPancakeComments($connection);
+                $recipe = "pancakes";
+                include_once '../Includes/comment_databasehandler.php';
+                include_once '../Includes/delete_comment.php';
+                include_once '../Includes/get_comments.php';
                 
                 if(isset($_SESSION['id']))
                 {
                     echo '<h3>Kommentera:</h3>
-                            <form method="POST" action="'.setComments($connection).'">
+                            <form method="POST" action="../Includes/set_comment.php">
                                 <input type="hidden" name="username" value="'.$_SESSION['usr'].'">
                                 <textarea rows="4" cols="70" name="comment"></textarea><br>
-                                <input type="hidden" name="recipe" value="pancakes">
+                                <input type="hidden" name="recipe" value="'.$recipe.'">
                                 <input type="submit" name="send_comment" value="Skicka kommentar">
                             </form>';
                 }

@@ -44,20 +44,23 @@
                 <p>Stina: Väldigt goda köttbullar!</p>
                 
             <?php
-                include '../Includes/comment_databasehandler.php';
-                include '../Includes/comment_functions.php';
-                getMeatballComments($connection);
+                $recipe = "meatballs";
+                include_once '../Includes/comment_databasehandler.php';
+                include_once '../Includes/get_comments.php';
+                include_once '../Includes/delete_comment.php';
+                
                 
                 if(isset($_SESSION['id']))
                 {
                     echo '<h3>Kommentera:</h3>
-                            <form method="POST" action="'.setComments($connection).'">
+                            <form method="POST" action="../Includes/set_comment.php">
                                 <input type="hidden" name="username" value="'.$_SESSION['usr'].'">
                                 <textarea rows="4" cols="70" name="comment"></textarea><br>
-                                <input type="hidden" name="recipe" value="meatballs">
+                                <input type="hidden" name="recipe" value="'.$recipe.'">
                                 <input type="submit" name="send_comment" value="Skicka kommentar">
                             </form>';   
                 }
+                
             ?>
         </div>
     </body>

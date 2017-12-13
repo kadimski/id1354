@@ -16,6 +16,7 @@
     <body>
         <?php
             include_once '../Includes/logo_and_meny.php';
+            $_SESSION['recipe'] = 'meatballs';
         ?> 
         
         <div class="background">
@@ -48,9 +49,7 @@
                 <p>Stina: Väldigt goda köttbullar!</p>
             
             <div class="comments">
-                <?php
-                    $_SESSION['recipe'] = 'meatballs';
-                ?>
+
             </div>
                 
             <?php

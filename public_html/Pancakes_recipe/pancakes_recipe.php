@@ -11,10 +11,12 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="../Includes/get_comments.js"></script>
         <script src="../Includes/set_comment.js"></script>
+        <script src="../Includes/delete_comment.js"></script>
     </head>
     <body>
         <?php
             include_once '../Includes/logo_and_meny.php';
+            $_SESSION['recipe'] = 'pancakes';
         ?> 
         
         <div class="background">
@@ -44,9 +46,7 @@
                 <p>Stina: Väldigt goda pannkakor!</p>
                 
             <div class="comments">
-                <?php
-                    $_SESSION['recipe'] = 'pancakes';
-                ?>
+
             </div>
             
             <?php

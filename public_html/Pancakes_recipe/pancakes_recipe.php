@@ -10,8 +10,7 @@
         <link href='https://fonts.googleapis.com/css?family=Alef' rel='stylesheet'>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="../Includes/get_comments.js"></script>
-        <script src="../Includes/set_comment.js"></script>
-        <script src="../Includes/delete_comment.js"></script>
+        <script src="../Includes/set_and_delete_comment.js"></script>
     </head>
     <body>
         <?php

@@ -8,6 +8,9 @@
         <link rel="stylesheet" type="text/css" href="../style.css">
         <link href='https://fonts.googleapis.com/css?family=Atma' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Alef' rel='stylesheet'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="../Includes/get_comments.js"></script>
+        <script src="../Includes/set_comment.js"></script>
     </head>
     <body>
         <?php
@@ -40,21 +43,20 @@
             <h3>Kommentarer:</h3>
                 <p>Stina: Väldigt goda pannkakor!</p>
                 
+            <div class="comments">
+                <?php
+                    $_SESSION['recipe'] = 'pancakes';
+                ?>
+            </div>
+            
             <?php
-                $recipe = "pancakes";
-                include_once '../Includes/comment_databasehandler.php';
-                include_once '../Includes/delete_comment.php';
-                include_once '../Includes/get_comments.php';
-                
-                if(isset($_SESSION['id']))
+                if(isset($_SESSION['usr']))
                 {
-                    echo '<h3>Kommentera:</h3>
-                            <form method="POST" action="../Includes/set_comment.php">
-                                <input type="hidden" name="username" value="'.$_SESSION['usr'].'">
-                                <textarea rows="4" cols="70" name="comment"></textarea><br>
-                                <input type="hidden" name="recipe" value="'.$recipe.'">
-                                <input type="submit" name="send_comment" value="Skicka kommentar">
-                            </form>';
+            ?>
+                <h3>Kommentera:</h3>
+                    <textarea rows="4" cols="70" class="comment" name="comment"></textarea><br>                            
+                    <button onclick = "post()">Skicka kommentar</button>
+            <?php
                 }
             ?>
         </div>    

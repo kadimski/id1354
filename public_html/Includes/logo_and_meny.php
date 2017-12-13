@@ -10,7 +10,7 @@
             <li><a href="../Pancakes_recipe/pancakes_recipe.php">Pannkakor</a></li>
             <li><a href="../Calendar/calendar.php">Kalender</a></li>
             <?php
-                if(isset($_SESSION['id']))
+                if(isset($_SESSION['usr']))
                 {
                     echo '<li><a href="../Includes/logout.php">Logga ut '.$_SESSION['usr'].'</a></li>';
                 }

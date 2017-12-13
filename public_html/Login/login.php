@@ -7,7 +7,8 @@
         <link rel="stylesheet" type="text/css" href="../reset.css">
         <link rel="stylesheet" type="text/css" href="../style.css">
         <link href='https://fonts.googleapis.com/css?family=Atma' rel='stylesheet'>
-        <link href='https://fonts.googleapis.com/css?family=Alef' rel='stylesheet'
+        <link href='https://fonts.googleapis.com/css?family=Alef' rel='stylesheet'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
         <?php

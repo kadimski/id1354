@@ -1,21 +1,32 @@
 <?php
+    session_start();
+
+    require '../Includes/Comment.php';
     include_once '../Includes/comment_databasehandler.php';
 
-    if(isset($_POST['send_comment']))
+    if(isset($_POST['comment']))
     {
-        $username = $_POST['username'];
+        $username = $_SESSION['usr'];
         $comment = $_POST['comment'];
-        $recipe = $_POST['recipe'];
+        $recipe = $_SESSION['recipe'];
 
         $sql_instruction = "INSERT INTO comments (username, message, recipe) VALUES('$username', '$comment', '$recipe')";
-        $result = mysqli_query($connection, $sql_instruction);
-
-        if ($recipe == "meatballs")
+        mysqli_query($connection, $sql_instruction);
+        
+        $sql_get = "SELECT * FROM comments WHERE recipe = '$recipe'";
+        $result = mysqli_query($connection, $sql_get);
+    
+        $array = array();
+    
+        while($row = mysqli_fetch_assoc($result))
         {
-            header("Location: ../Meatballs_recipe/meatballs_recipe.php");
-        } 
-        elseif ($recipe == "pancakes")
+            $comment = new Comment($row['username'], $row['message'], $row['commentid'], false);
+        if($row['username'] == $_SESSION['usr'])
         {
-            header("Location: ../Pancakes_recipe/pancakes_recipe.php");
+            $comment = new Comment($row['username'], $row['message'], $row['commentid'], true);
+        }   
+        $array[] = $comment;
         }
+
+        echo json_encode($array);
     }
